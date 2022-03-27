@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NatureOfCode</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="./lib/p5.js" defer></script>
+    <script defer>
+        const blue = [56, 86, 255]
+        const yellow = [255, 209, 56]
+        const green = [91, 255, 91]
+        const magenta = [255, 56, 116]
+        const red = [255, 56, 116]
+        const sky = [176, 213, 255]
+        const cyan = [16, 255, 203]
+        const purple = [187, 16, 255]
+
+        function it(title = "Project",
+            {
+                description = "",
+                background = "black",
+                note = ""
+            }) {
+
+            document.querySelector('.title').innerText = title
+            document.querySelector('.description').innerText = description
+            document.querySelector('.board').innerText = note
+            document.querySelector('canvas').classList.add(background)
+        }
+
+        function resizeBoard() {
+            const utilities = document.querySelector('.utilities')
+            const main = document.querySelector('#main')
+            const height = getComputedStyle(main).height
+            utilities.style.height = height
+        }
+
+        window.onresize = resizeBoard
+    </script>
+    <script src="./sketch.js" type="module" defer></script>
+</head>
+<body>
+    <div id="main">
+        <h1 class="title"></h1>
+        <p class="description"></p>
+    </div>
+    <div class="utilities">
+        <div class="board">
+        </div>
+        <div class="buttons">
+            <button class="project_changer">
+                Projects
+            </button>
+            <button class="project_controller stop">
+                Stop
+            </button>
+            <button class="restart">
+                Restart
+            </button>
+            <button class="board_changer">
+                Dashboard
+            </button>
+
+        </div>
+    </div>
+
+    <div class="projects">
+        <div class="projects__box">
+        </div>
+    </div>
+</body>
+</html>

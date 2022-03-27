@@ -1,0 +1,144 @@
+.test {
+    color: rgb(91, 255, 91);
+    color: rgb(255, 56, 56);
+    color: rgb(255, 209, 56);
+    color: rgb(56, 86, 255);
+    color: rgb(255, 56, 116);
+    
+    color: rgb(176, 213, 255);
+    color: rgb(16, 255, 203);
+    color: rgb(255, 161, 232);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: hsl(0, 0%, 14%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#main {
+    margin-right: 1em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.title {
+    margin: 0.3em 0 0 0;
+    color: white;
+    font-size: 2.5em;
+}
+.description {
+    margin: -1.5em 0 1em 0;
+    color: rgb(204, 204, 204);
+    font-size: 0.8em;
+}
+
+.utilities {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.board {
+    width: 100%;
+    height: 90%;
+    background-color: #f3f3f3;
+    padding: 1em 1em;
+    white-space: nowrap;
+    overflow: auto;
+}
+
+.buttons {
+    height: 8%;
+    display: flex;
+    flex-direction: row;
+
+}
+.buttons button {
+    width: 50%;
+    font-size: 1.7vw;
+    font-size: max(1.2em);
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.project_changer {
+    background-color: #006eff;  
+}
+.project_changer:hover {
+    background-color: #2985ff;
+}
+.board_changer {
+    background-color: #383838;
+}
+.board_changer:hover {
+    background-color: #616161;
+}
+.stop {
+    background-color: rgb(255, 56, 56);
+}
+.stop:hover {
+    background-color: rgb(255, 93, 93);
+}
+.start {
+    background-color: #34b960;
+}
+.start:hover {
+    background-color: #2ad15c;
+}
+.restart {
+    background-color: #fa9e14;
+}
+.restart:hover {
+    background-color: #f8a45f;
+}
+
+
+.projects {
+    display: none;
+    place-items: center;
+    background-color: rgba(0, 0, 0, 0.479);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.projects__box {
+    width: 50vw;
+    height: 80vh;
+    background-color: #fefefe;
+    padding: 2em 2.5em;
+    max-width: 40em;
+    overflow: auto;
+}
+
+.projects__box p {
+    color: #2c2c2c;
+    font-size: 2vw;
+    font-size: max(1.5em);
+    padding: 0.3em 0;
+    border-top: 0.1em #797979 solid;
+    cursor: pointer;
+}
+.projects__box p:hover {
+    color: #006eff;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+/* COLORS */
+.black {
+    background-color: rgb(24, 24, 24);
+}
